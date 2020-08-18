@@ -6,6 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import { Provider } from "mobx-react";
 import "semantic-ui-css/semantic.min.css";
 import Store from "./Store/Store";
+
 ReactDOM.render(
   <Provider Store={Store}>
     <App />
