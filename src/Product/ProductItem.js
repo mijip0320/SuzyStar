@@ -24,6 +24,8 @@ class ProductItem extends Component {
         pName: "",
         price: "",
         imgUrl: "",
+        des: "",
+        property: "",
       },
     };
   }
@@ -45,6 +47,8 @@ class ProductItem extends Component {
             <Card.Header>Suzy</Card.Header>
             <Card.Meta>
               <span>{data.pName}</span>
+              <br />
+              <span>{data.property}</span>
             </Card.Meta>
             <Card.Description>{data.price}</Card.Description>
           </Card.Content>
