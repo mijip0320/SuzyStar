@@ -19,7 +19,11 @@ const ProductModal = (props) => {
 
         <Modal.Description>
           <Header>{product.pName}</Header>
-          <p>{product.des}</p>
+          <p>
+            {product.des.split("\n").map((i) => {
+              return <p>{i}</p>;
+            })}
+          </p>
           <p>{product.price}</p>
           <br></br>
           <span>price : </span>
