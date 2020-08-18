@@ -3,7 +3,7 @@ import Users from "../Users";
 
 class UserStore {
   @observable users = Users;
-  @observable user = {};
+  @observable user = Users[0];
 
   @computed get getUsers() {
     return this.users;

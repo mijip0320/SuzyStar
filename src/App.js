@@ -1,15 +1,17 @@
 import "./App.css";
 import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
-import ImageSlide from "./ImageSlider/ImageSlide";
-import ProductItemContainer from "./Product/Container/ProductItemContainer";
-import ProductItem from "./Product/View/ProductItem";
-import ProductList from "./Product/View/ProductList";
 import Header from "./View/Header";
 import Footer from "./View/Footer";
-import Etc from "./View/Etc";
+import Main from "./Main/Main";
+import Login from "./View/Login";
+import { inject, observer } from "mobx-react";
+
+@inject("MainStore")
+@observer
 class App extends Component {
   render() {
+    let view = this.props.MainStore.getMainView;
     return (
       <Grid>
         <Grid.Row>
@@ -17,24 +19,8 @@ class App extends Component {
             <Header />
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>
-            <ImageSlide />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width={4}>
-            <ProductList />
-          </Grid.Column>
-          <Grid.Column width={12}>
-            <ProductItemContainer />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>
-            <Etc />
-          </Grid.Column>
-        </Grid.Row>
+        {view === "Home" && <Main />}
+        {view === "Login" && <Login />}
         <Grid.Row>
           <Grid.Column>
             <Footer />

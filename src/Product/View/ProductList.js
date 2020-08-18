@@ -1,19 +1,12 @@
-import React, { Component } from "react";
 import { List, Header } from "semantic-ui-react";
 import "./ProductList.css";
-class ProductList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      category: ["Music", "Photo", "Concert", "Living", "Beauty"],
-    };
-  }
+import React from "react";
 
-  getDataList() {
-    let datas = this.state.category;
-    let dataList;
+const ProductList = (props) => {
+  const getDataList = () => {
+    let datas = props.list;
 
-    dataList = datas.map((data, idx) => {
+    let dataList = datas.map((data, idx) => {
       return (
         <List.Item key={idx} onClick={() => console.log(idx)}>
           <List.Content>
@@ -23,20 +16,50 @@ class ProductList extends Component {
       );
     });
     return dataList;
-  }
-
-  render() {
-    let dataList = this.getDataList();
-    return (
-      <div className="product-list">
-        <Header size="huge">Suzy</Header>
-        <hr></hr>
-        <List size="huge" animated verticalAlign="middle">
-          {dataList}
-        </List>
-      </div>
-    );
-  }
-}
+  };
+  let dataList = getDataList();
+  return (
+    <div className="product-list">
+      <Header size="huge">Suzy</Header>
+      <hr></hr>
+      <List size="huge" animated verticalAlign="middle">
+        {dataList}
+      </List>
+    </div>
+  );
+};
 
 export default ProductList;
+
+// class ProductList extends Component {
+//   getDataList() {
+//     let datas = this.props.list;
+//     let dataList;
+
+//     dataList = datas.map((data, idx) => {
+//       return (
+//         <List.Item key={idx} onClick={() => console.log(idx)}>
+//           <List.Content>
+//             <List.Header>{data}</List.Header>
+//           </List.Content>
+//         </List.Item>
+//       );
+//     });
+//     return dataList;
+//   }
+
+//   render() {
+//     let dataList = this.getDataList();
+//     return (
+//       <div className="product-list">
+//         <Header size="huge">Suzy</Header>
+//         <hr></hr>
+//         <List size="huge" animated verticalAlign="middle">
+//           {dataList}
+//         </List>
+//       </div>
+//     );
+//   }
+// }
+
+// export default ProductList;

@@ -4,6 +4,7 @@ class ProductStore {
   @observable products = Products;
   @observable product = Products[0];
   @observable open = false;
+  @observable list = ["Music", "Photo", "Concert", "Living", "Beauty"];
 
   @computed get getProducts() {
     return this.products;
@@ -14,6 +15,9 @@ class ProductStore {
   }
   @computed get getOpen() {
     return this.open;
+  }
+  @computed get getList() {
+    return this.list;
   }
 
   @action
@@ -29,6 +33,21 @@ class ProductStore {
   @action
   setClose() {
     this.open = false;
+  }
+
+  @action
+  updateProduct(price) {
+    let updateName = "Update";
+    let updatePrice = price;
+    this.product = { ...this.product, pName: updateName, price: updatePrice };
+  }
+
+  @action
+  deleteProduct() {
+    this.products = this.products.filter(
+      (product) => this.product.id !== product.id
+    );
+    this.setClose();
   }
 }
 export default new ProductStore();
