@@ -5,14 +5,13 @@ import Footer from "./View/Footer";
 import ProductItem from "./View/ProductItem";
 import ImageSlide from "./View/ImageSlide";
 import ProductList from "./View/ProductList";
-import ProductItem from "./View/ProductItem";
 import Etc from "./View/Etc";
 class App extends Component {
   render() {
     return (
       <Grid>
         <Grid.Row>
-          <Grid.Column>Header</Grid.Column>
+          <Grid.Column></Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
