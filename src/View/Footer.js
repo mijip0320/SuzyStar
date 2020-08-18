@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Header, List, Segment, Grid, Container } from "semantic-ui-react";
-//import { createMedia } from "@artsy/fresnel";
-import PropTypes from "prop-types";
 
 class Footer extends Component {
   render() {
@@ -17,7 +15,6 @@ class Footer extends Component {
                     <List.Item as="a">Sitemap</List.Item>
                     <List.Item as="a">Contact Us</List.Item>
                     <List.Item as="a">Github</List.Item>
-                    {/* <List.Item as="a">Gazebo Plans</List.Item> */}
                   </List>
                 </Grid.Column>
                 <Grid.Column width={3}>
