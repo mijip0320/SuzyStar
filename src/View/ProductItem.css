@@ -1,0 +1,21 @@
+.product-item {
+    width: 95%;
+    margin-top: 5.2rem;
+    border-top: 1px solid gray
+}
+
+.card-item {
+    margin-top: 2rem !important;
+    width: 27rem !important;
+    cursor: pointer;
+}
+
+.product-pagination {
+    margin-top: 3rem;
+    text-align: center;
+
+}
+
+.pagination {
+    font-size: 1.2rem !important;
+}

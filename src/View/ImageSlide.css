@@ -1,0 +1,31 @@
+.slider-container {
+  width: 100%;
+  padding: 5rem;
+  background-color: rgb(245, 240, 234);
+}
+
+img {
+  width: 100%;
+}
+
+.angle-right-icon {
+  color: rgb(250, 231, 218) !important;
+  position: absolute;
+  right: 7rem;
+  top: 45%;
+}
+
+.angle-right-icon:hover {
+  cursor: pointer;
+}
+
+.angle-left-icon {
+  color: rgb(250, 231, 218) !important;
+  position: absolute;
+  left: 7rem;
+  top: 45%;
+}
+
+.angle-left-icon:hover {
+  cursor: pointer;
+}
