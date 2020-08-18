@@ -4,7 +4,6 @@ import React, { Component } from "react";
 import Header from "./View/Header";
 import Footer from "./View/Footer";
 import Main from "./Main/Main";
-import Login from "./View/Login";
 import { inject, observer } from "mobx-react";
 
 @inject("MainStore")
@@ -20,7 +19,7 @@ class App extends Component {
           </Grid.Column>
         </Grid.Row>
         {view === "Home" && <Main />}
-        {view === "Login" && <Login />}
+        {/* {view === "Login" && <Login />} */}
         <Grid.Row>
           <Grid.Column>
             <Footer />

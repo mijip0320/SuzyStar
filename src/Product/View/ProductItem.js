@@ -8,18 +8,6 @@ class ProductItem extends Component {
     super(props);
     this.state = {
       pageNum: 1,
-<<<<<<< HEAD:src/Product/ProductItem.js
-      open: false,
-      product: {
-        id: "",
-        pName: "",
-        price: "",
-        imgUrl: "",
-        des: "",
-        property: "",
-      },
-=======
->>>>>>> 63a25cc54752f0324b8f70ab4229dc830285a3c0:src/Product/View/ProductItem.js
     };
   }
   getDataList() {

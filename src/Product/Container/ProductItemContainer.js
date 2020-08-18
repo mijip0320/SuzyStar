@@ -11,6 +11,7 @@ class ProductItemContainer extends Component {
       pName: data.pName,
       price: data.price,
       imgUrl: data.imgUrl,
+      des: data.des,
     };
     this.props.ProductStore.setProduct(product);
     this.props.ProductStore.setOpen();

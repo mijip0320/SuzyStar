@@ -10,6 +10,7 @@ const ProductModal = (props) => {
   };
 
   let { open, onClose, product, user, onUpdate, onDelete } = props;
+  console.log(product);
   return (
     <Modal open={open} onClose={onClose}>
       <Modal.Header>Product</Modal.Header>
@@ -18,10 +19,7 @@ const ProductModal = (props) => {
 
         <Modal.Description>
           <Header>{product.pName}</Header>
-          <p>
-            We've found the following gravatar image associated with your e-mail
-            address. OFFICIAL FANLIGHT
-          </p>
+          <p>{product.des}</p>
           <p>{product.price}</p>
           <br></br>
           <span>price : </span>
