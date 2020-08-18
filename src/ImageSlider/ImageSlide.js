@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "react-slideshow-image/dist/styles.css";
+// import "react-slideshow-image/dist/styles.css";
 import "./ImageSlide.css";
 import { Icon } from "semantic-ui-react";
 import Images from "../SlideImages.js";
