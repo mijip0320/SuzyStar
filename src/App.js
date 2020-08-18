@@ -2,8 +2,9 @@ import "./App.css";
 import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
 import ImageSlide from "./ImageSlider/ImageSlide";
-import ProductItem from "./Product/ProductItem";
-import ProductList from "./Product/ProductList";
+import ProductItemContainer from "./Product/Container/ProductItemContainer";
+import ProductItem from "./Product/View/ProductItem";
+import ProductList from "./Product/View/ProductList";
 import Header from "./View/Header";
 import Footer from "./View/Footer";
 import Etc from "./View/Etc";
@@ -26,7 +27,7 @@ class App extends Component {
             <ProductList />
           </Grid.Column>
           <Grid.Column width={12}>
-            <ProductItem />
+            <ProductItemContainer />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
