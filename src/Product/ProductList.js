@@ -5,7 +5,7 @@ class ProductList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      category: ["Music", "Photo", "Concert", "Living", "Beauty"],
+      category: ["Music", "Photo", "Concert", "Living", "Accessory", "Beauty"],
     };
   }
 

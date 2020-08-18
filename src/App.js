@@ -1,17 +1,20 @@
 import "./App.css";
 import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
+import ImageSlide from "./ImageSlider/ImageSlide";
+import ProductItem from "./Product/ProductItem";
+import ProductList from "./Product/ProductList";
+import Header from "./View/Header";
 import Footer from "./View/Footer";
-import ProductItem from "./View/ProductItem";
-import ImageSlide from "./View/ImageSlide";
-import ProductList from "./View/ProductList";
 import Etc from "./View/Etc";
 class App extends Component {
   render() {
     return (
       <Grid>
         <Grid.Row>
-          <Grid.Column></Grid.Column>
+          <Grid.Column>
+            <Header />
+          </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
@@ -23,11 +26,6 @@ class App extends Component {
             <ProductList />
           </Grid.Column>
           <Grid.Column width={12}>
-            <ProductItem />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>
             <ProductItem />
           </Grid.Column>
         </Grid.Row>

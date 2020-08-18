@@ -5,9 +5,8 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "mobx-react";
 import "semantic-ui-css/semantic.min.css";
-import Store from "./Store/Store";
-import ProductStore from "./Store/ProductStore";
-import UserStore from "./Store/UserStore";
+import ProductStore from "./Product/ProductStore";
+import UserStore from "./User/UserStore";
 
 ReactDOM.render(
   <Provider ProductStore={ProductStore} UserStore={UserStore}>
