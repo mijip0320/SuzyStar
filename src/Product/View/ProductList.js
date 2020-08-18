@@ -8,7 +8,7 @@ const ProductList = (props) => {
 
     let dataList = datas.map((data, idx) => {
       return (
-        <List.Item key={idx} onClick={() => console.log(idx)}>
+        <List.Item key={idx} onClick={() => props.selectProduct(data)}>
           <List.Content>
             <List.Header>{data}</List.Header>
           </List.Content>

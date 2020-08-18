@@ -6,11 +6,11 @@ import { Button, Header, Image, Modal, Input } from "semantic-ui-react";
 const ProductModal = (props) => {
   const [price, setPrice] = useState("");
   const onChange = (e) => {
-    setPrice(e.target.value);
+    let updatePrice = e.target.value;
+    setPrice(updatePrice);
   };
 
   let { open, onClose, product, user, onUpdate, onDelete } = props;
-  console.log(product);
   return (
     <Modal open={open} onClose={onClose}>
       <Modal.Header>Product</Modal.Header>
@@ -20,15 +20,15 @@ const ProductModal = (props) => {
         <Modal.Description>
           <Header>{product.pName}</Header>
           <p>
-            {product.des.split("\n").map((i) => {
-              return <p>{i}</p>;
+            {product.des.split("\n").map((i, idx) => {
+              return <p key={idx}>{i}</p>;
             })}
           </p>
           <p>{product.price}</p>
           <br></br>
           <span>price : </span>
           <Input
-            value="price"
+            size="mini"
             placeholder={product.price}
             onChange={(e) => onChange(e)}
           />

@@ -3,7 +3,7 @@ import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
 import Header from "./View/Header";
 import Footer from "./View/Footer";
-import Main from "./Main/Main";
+import Main from "./MainPage/Main";
 import { inject, observer } from "mobx-react";
 
 @inject("MainStore")

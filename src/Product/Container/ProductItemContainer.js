@@ -17,9 +17,12 @@ class ProductItemContainer extends Component {
     this.props.ProductStore.setOpen();
   };
   render() {
-    const products = this.props.ProductStore.getProducts;
+    const products = this.props.ProductStore.getSelectProducts;
+    const length = products.length;
 
-    return <ProductItem onOpen={this.onOpen} products={products} />;
+    return (
+      <ProductItem onOpen={this.onOpen} products={products} length={length} />
+    );
   }
 }
 
