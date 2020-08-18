@@ -1,9 +1,9 @@
 import { observable, computed } from "mobx";
-import Users from "../Users";
+import Users from "../Data/Users";
 
 class UserStore {
   @observable users = Users;
-  @observable user = {};
+  @observable user = Users[0];
 
   @computed get getUsers() {
     return this.users;

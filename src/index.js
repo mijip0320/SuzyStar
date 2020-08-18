@@ -5,11 +5,16 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "mobx-react";
 import "semantic-ui-css/semantic.min.css";
-import ProductStore from "./Product/ProductStore";
+import ProductStore from "./Product/Store/ProductStore";
 import UserStore from "./User/UserStore";
+import MainStore from "./Main/MainStore";
 
 ReactDOM.render(
-  <Provider ProductStore={ProductStore} UserStore={UserStore}>
+  <Provider
+    MainStore={MainStore}
+    ProductStore={ProductStore}
+    UserStore={UserStore}
+  >
     <App />
   </Provider>,
   document.getElementById("root")
