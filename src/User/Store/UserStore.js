@@ -1,5 +1,5 @@
 import { observable, computed } from "mobx";
-import Users from "../Users";
+import Users from "../Data/Users";
 
 class UserStore {
   @observable users = Users;

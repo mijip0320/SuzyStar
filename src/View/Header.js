@@ -22,7 +22,7 @@ export default class MenuExampleSecondaryPointing extends Component {
             <Image
               size="tiny"
               src="etc_image/logo.png"
-              style={{ margin: "10px 0px 10px 100px" }}
+              style={{ margin: "10px 0px 10px 200px" }}
             />
             {/*위오아왼 */}
           </Menu.Item>
