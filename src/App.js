@@ -5,6 +5,7 @@ import ImageSlide from "./ImageSlider/ImageSlide";
 import ProductItem from "./Product/ProductItem";
 import ProductList from "./Product/ProductList";
 import Header from "./View/Header";
+import Footer from "./View/Footer";
 import Etc from "./View/Etc";
 class App extends Component {
   render() {
@@ -30,11 +31,18 @@ class App extends Component {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
+            <ProductItem />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>
             <Etc />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column>Footer</Grid.Column>
+          <Grid.Column>
+            <Footer />
+          </Grid.Column>
         </Grid.Row>
       </Grid>
     );
