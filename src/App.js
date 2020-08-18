@@ -31,11 +31,6 @@ class App extends Component {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <ProductItem />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>
             <Etc />
           </Grid.Column>
         </Grid.Row>

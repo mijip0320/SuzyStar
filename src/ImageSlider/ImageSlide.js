@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import "react-slideshow-image/dist/styles.css";
 import "./ImageSlide.css";
 import { Icon } from "semantic-ui-react";
 import Images from "../SlideImages.js";
@@ -36,7 +35,6 @@ class ImageSlide extends Component {
     let { imgIndex } = this.state;
     return (
       <div className="slider-container">
-        {/* <SimpleImageSlider width={960} height={500} images={slideImages} /> */}
         <img src={slideImages[imgIndex].imgUrl} alt="슬라이드 사진" />
         <Icon
           name="angle right"
