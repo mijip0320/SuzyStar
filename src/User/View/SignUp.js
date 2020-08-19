@@ -62,6 +62,7 @@ const SignUp = (props) => {
                 fluid
                 floated="right"
                 size="large"
+                onClick={onAddUser}
                 style={{
                   width: "28rem",
                   margin: "10px 0px 0px 0px",

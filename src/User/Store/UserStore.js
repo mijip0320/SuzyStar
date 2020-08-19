@@ -78,6 +78,7 @@ class UserStore {
     // console.log(this.users);
     this.signUpUser = {};
     alert("회원가입 완료!");
+    return true;
   }
 }
 
