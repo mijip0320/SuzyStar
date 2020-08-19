@@ -18,7 +18,7 @@ class Footer extends Component {
             fixed: "bottom",
           }}
         >
-          <Container style={{margin: "50px 0px 50px 0px"}}>
+          <Container style={{ margin: "50px 0px 50px 0px" }}>
             <Grid divided inverted stackable>
               <Grid.Row>
                 <Grid.Column width={3}>
@@ -40,11 +40,14 @@ class Footer extends Component {
                 </Grid.Column>
                 <Grid.Column width={9}>
                   <Header as="h3" inverted>
-                    Footer Header
+                    About Suzy...
                   </Header>
+                  <p>출생 1994년 10월 10일</p>
+                  <p>소속사 매니지먼트 숲</p>
+                  <p>데뷔 2010년 미쓰에이 싱글 앨범 [Bad But Good]</p>
                   <p>
-                    Extra space for a call to action inside the footer that
-                    could help re-engage users.
+                    수상 2019년 SBS 연기대상 미니시리즈부문 여자 최우수연기상
+                    (배가본드)
                   </p>
                 </Grid.Column>
               </Grid.Row>
