@@ -72,10 +72,8 @@ class UserStore {
 
   @action
   addSignUp(signUpUser) {
-    // console.log(this.signUpUser);
     let tempUser = { ...signUpUser, basket: [] };
     this.users = this.users.concat(tempUser);
-    // console.log(this.users);
     this.signUpUser = {};
     alert("회원가입 완료!");
     return true;

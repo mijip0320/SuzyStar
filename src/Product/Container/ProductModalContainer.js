@@ -15,9 +15,14 @@ class ProductModalContainer extends Component {
     this.props.ProductStore.deleteProduct();
   };
   addBasket = () =>{
+    if(this.props.UserStore.getUser.userId === "guest"){
+      alert("회원만 이용 가능합니다.")
+    }
+    else{
     let product = this.props.ProductStore.getProduct;
     this.props.UserStore.setBasket(product);
     this.onClose();
+    }
   }
   render() {
     const user = this.props.UserStore.getUser;
