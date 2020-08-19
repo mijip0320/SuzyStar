@@ -1,11 +1,19 @@
 .basket-container {
-    padding-top: 2rem;
-    margin: 0 auto;
-    width: 88%;
+  padding-top: 2rem;
+  margin: 0 auto;
+  width: 88%;
+}
+.basket-header {
+  padding-left: 2rem !important;
 }
 
+.basket-button {
+  position: absolute !important;
+  top: 2rem !important;
+  right: 9rem !important;
+}
 .card-item {
-    margin-top: 2rem !important;
-    width: 25rem !important;
-    cursor: pointer;
+  margin-top: 2rem !important;
+  width: 25rem !important;
+  cursor: pointer;
 }

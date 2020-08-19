@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Header, Card, Image } from 'semantic-ui-react';
+import { Grid, Header, Card, Image, Button } from 'semantic-ui-react';
 import "./Basket.css";
 
 class Basket extends Component {
@@ -30,7 +30,17 @@ class Basket extends Component {
             <Grid.Row >
                 <Grid.Column>
                     <div className="basket-container">
-                <Header as="h1">Basket</Header>
+                <Header as="h1" className="basket-header">Basket</Header>
+                <Button 
+                onClick={()=>{
+                  alert("구매에 성공하였습니다.")
+                }}
+                className="basket-button"
+          content="Buy"
+          labelPosition="right"
+          icon="checkmark"
+          positive
+        />
                 <hr></hr>
                 <Card.Group itemsPerRow={4}>{dataList}</Card.Group>
                 </div>
