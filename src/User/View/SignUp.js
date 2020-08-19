@@ -61,6 +61,7 @@ const SignUp = (props) => {
               <Button
                 onClick={onAddUser}
                 fluid
+                onClick={onAddUser}
                 floated="right"
                 size="large"
                 // eslint-disable-next-line react/jsx-no-duplicate-props
