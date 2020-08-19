@@ -1,10 +1,16 @@
 // import React, { Component } from "react";
 
-import React from "react";
-import { Button, Header, Image, Modal } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Button, Header, Image, Modal, Input } from "semantic-ui-react";
 
 const ProductModal = (props) => {
-  let { open, onClose, product } = props;
+  const [price, setPrice] = useState("");
+  const onChange = (e) => {
+    let updatePrice = e.target.value;
+    setPrice(updatePrice);
+  };
+
+  let { open, onClose, product, user, onUpdate, onDelete } = props;
   return (
     <Modal open={open} onClose={onClose}>
       <Modal.Header>Product</Modal.Header>
@@ -14,19 +20,41 @@ const ProductModal = (props) => {
         <Modal.Description>
           <Header>{product.pName}</Header>
           <p>
-            We've found the following gravatar image associated with your e-mail
-            address. OFFICIAL FANLIGHT
+            {product.des.split("\n").map((i, idx) => {
+              return <p key={idx}>{i}</p>;
+            })}
           </p>
           <p>{product.price}</p>
+          <br></br>
+          <span>price : </span>
+          <Input
+            size="mini"
+            placeholder={product.price}
+            onChange={(e) => onChange(e)}
+          />
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
+        {user.userId === "admin" && (
+          <Button
+            content="Update"
+            color="orange"
+            onClick={() => onUpdate(price)} //?
+          ></Button>
+        )}
+        {user.userId === "admin" && (
+          <Button
+            content="Delete"
+            color="red"
+            onClick={onDelete} //?
+          ></Button>
+        )}
+
         <Button
+          content="Basket"
           color="black"
           onClick={onClose} //?
-        >
-          Basket
-        </Button>
+        ></Button>
         <Button
           content="Buy"
           labelPosition="right"
@@ -40,43 +68,3 @@ const ProductModal = (props) => {
 };
 
 export default ProductModal;
-
-// class ProductModal extends Component {
-//   render() {
-//     let { open, onClose, product } = this.props;
-//     return (
-//       <Modal open={open} onClose={onClose}>
-//         <Modal.Header>Product</Modal.Header>
-//         <Modal.Content image>
-//           <Image wrapped src={product.imgUrl} style={{ marginBottom: 10 }} />
-
-//           <Modal.Description>
-//             <Header>{product.pName}</Header>
-//             <p>
-//               We've found the following gravatar image associated with your
-//               e-mail address. OFFICIAL FANLIGHT
-//             </p>
-//             <p>{product.price}</p>
-//           </Modal.Description>
-//         </Modal.Content>
-//         <Modal.Actions>
-//           <Button
-//             color="black"
-//             onClick={onClose} //?
-//           >
-//             Basket
-//           </Button>
-//           <Button
-//             content="Buy"
-//             labelPosition="right"
-//             icon="checkmark"
-//             onClick={onClose} //?
-//             positive
-//           />
-//         </Modal.Actions>
-//       </Modal>
-//     );
-//   }
-// }
-
-// export default ProductModal;

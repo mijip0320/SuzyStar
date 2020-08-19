@@ -17,6 +17,7 @@ class ProductItem extends Component {
     startNum = (pageNum - 1) * 3;
     lastNum = pageNum * 3;
     let { products, onOpen } = this.props;
+    console.log(products);
     let dataList = products.map((data, idx) =>
       idx >= startNum && idx < lastNum ? (
         <Card onClick={() => onOpen(data)} key={data.id} className="card-item">
@@ -25,6 +26,8 @@ class ProductItem extends Component {
             <Card.Header>Suzy</Card.Header>
             <Card.Meta>
               <span>{data.pName}</span>
+              <br />
+              <span>{data.property}</span>
             </Card.Meta>
             <Card.Description>{data.price}</Card.Description>
           </Card.Content>
@@ -33,6 +36,7 @@ class ProductItem extends Component {
         []
       )
     );
+    console.log(dataList);
     return dataList;
   }
   pageChange = (e, { activePage }) => {
@@ -41,9 +45,8 @@ class ProductItem extends Component {
     });
   };
   render() {
-    let { products } = this.props;
+    let { length } = this.props;
     let dataList = this.getDataList();
-    let totalLength = products.length;
     return (
       <div className="product-item">
         <Card.Group itemsPerRow={3}>{dataList}</Card.Group>
@@ -54,7 +57,7 @@ class ProductItem extends Component {
             lastItem={null}
             pointing
             secondary
-            totalPages={totalLength / 3}
+            totalPages={Math.ceil(length / 3)}
             onPageChange={this.pageChange}
           />
         </div>

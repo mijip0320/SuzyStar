@@ -2,11 +2,25 @@ import { observable, computed, action } from "mobx";
 import Products from "../Data/Products";
 class ProductStore {
   @observable products = Products;
+  @observable selectProducts = Products;
+  @observable selectMenu = "";
   @observable product = Products[0];
   @observable open = false;
+  @observable list = [
+    "Music",
+    "Photo",
+    "Concert",
+    "Living",
+    "Beauty",
+    "Accessory",
+  ];
 
   @computed get getProducts() {
     return this.products;
+  }
+
+  @computed get getSelectProducts() {
+    return this.selectProducts;
   }
   @computed get getProduct() {
     console.log(this.product);
@@ -14,6 +28,9 @@ class ProductStore {
   }
   @computed get getOpen() {
     return this.open;
+  }
+  @computed get getList() {
+    return this.list;
   }
 
   @action
@@ -29,6 +46,31 @@ class ProductStore {
   @action
   setClose() {
     this.open = false;
+  }
+
+  @action
+  updateProduct(price) {
+    let updateName = "Update";
+    let updatePrice = price;
+    this.product = { ...this.product, pName: updateName, price: updatePrice };
+  }
+
+  @action
+  deleteProduct() {
+    this.products = this.products.filter(
+      (product) => this.product.id !== product.id
+    );
+    this.setClose();
+  }
+
+  @action
+  setSelectProducts(name) {
+    console.log(name);
+    this.selectProducts = this.products.filter(
+      (product) => product.property === name
+    );
+    this.selectMenu = name;
+    console.log(this.products);
   }
 }
 export default new ProductStore();

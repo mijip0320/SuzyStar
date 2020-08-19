@@ -2,6 +2,11 @@ import { observable, computed, action } from "mobx";
 import Users from "../Data/Users"
 // 1.Mobx store 클래스 선언
 class UserStore {
+<<<<<<< HEAD
+=======
+  @observable users = Users;
+  @observable user = Users[0];
+>>>>>>> 88726eb65d9c8f8521fd510733e6f10667324d71
 
   // 2.관리해야하는 state객체 @observable 선언, 초기화
   @observable 

@@ -11,14 +11,18 @@ class ProductItemContainer extends Component {
       pName: data.pName,
       price: data.price,
       imgUrl: data.imgUrl,
+      des: data.des,
     };
     this.props.ProductStore.setProduct(product);
     this.props.ProductStore.setOpen();
   };
   render() {
-    const products = this.props.ProductStore.getProducts;
+    const products = this.props.ProductStore.getSelectProducts;
+    const length = products.length;
 
-    return <ProductItem onOpen={this.onOpen} products={products} />;
+    return (
+      <ProductItem onOpen={this.onOpen} products={products} length={length} />
+    );
   }
 }
 
