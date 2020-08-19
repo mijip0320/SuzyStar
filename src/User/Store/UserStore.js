@@ -7,7 +7,10 @@ class UserStore {
 
   @observable
   loginUser = {};
- 
+
+  @observable
+  signUpUser = {};
+
   @computed
   get getUser() {
     return this.user ? { ...this.user } : {};
@@ -18,7 +21,7 @@ class UserStore {
     return this.users ? { ...this.users } : [];
   }
 
-//입력창에 데이터가 입력된다
+  //입력창에 데이터가 입력된다
   @action
   setLgnProp(key, value) {
     this.loginUser = {
@@ -27,7 +30,7 @@ class UserStore {
     };
   }
 
-//기능1. 로그인 버튼 클릭 이벤트 설정
+  //기능1. 로그인 버튼 클릭 이벤트 설정
   @action
   login() {
     if (
@@ -39,6 +42,12 @@ class UserStore {
       alert("아이디 또는 비밀번호가 일치하지 않습니다. 다시 시도해 주세요.");
     }
     this.user = this.loginUser;
+  }
+
+  @action
+  addSignUp(signUpUser) {
+    this.users = this.users.concat(signUpUser);
+    this.signUpUser = {};
   }
 }
 

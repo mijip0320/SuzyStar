@@ -13,15 +13,15 @@ const SlideImages = [
   },
   {
     id: 4,
-    imgUrl: "slide_image/suzy4.png",
+    imgUrl: "slide_image/suzy4.jpg",
   },
   {
     id: 5,
-    imgUrl: "slide_image/suzy5.png",
+    imgUrl: "slide_image/suzy6.png",
   },
   {
     id: 6,
-    imgUrl: "slide_image/suzy6.png",
+    imgUrl: "slide_image/suzy7.png",
   },
 ];
 export default SlideImages;

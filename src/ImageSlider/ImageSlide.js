@@ -35,7 +35,7 @@ class ImageSlide extends Component {
     let { imgIndex } = this.state;
     return (
       <div className="slider-container">
-        <img src={slideImages[imgIndex].imgUrl} alt="슬라이드 사진" />
+        <img wrapped src={slideImages[imgIndex].imgUrl} alt="슬라이드 사진" />
         <Icon
           name="angle right"
           size="huge"
