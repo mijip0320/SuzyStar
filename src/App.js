@@ -2,9 +2,13 @@ import "./App.css";
 import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
 import Header from "./View/Header";
+
+import Login from "./User/View/Login";
+import LoginContainer from "./User/Container/LoginContainer";
+import SignUp from "./User/View/SignUp";
+
 import Footer from "./View/Footer";
-import Revealer from "./View/Revealer";
-import Main from "./Main/Main";
+import Main from "./MainPage/Main";
 import { inject, observer } from "mobx-react";
 
 @inject("MainStore")
@@ -17,6 +21,8 @@ class App extends Component {
         <Grid.Row>
           <Grid.Column>
             <Header />
+            <LoginContainer />
+            <SignUp />
           </Grid.Column>
         </Grid.Row>
         {view === "Home" && <Main />}
