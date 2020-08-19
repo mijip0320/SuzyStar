@@ -1,11 +1,7 @@
 const Users = [
   {
     userId: "admin",
-<<<<<<< HEAD
-    pasd: "111",
-=======
     pasd: "admin",
->>>>>>> 88726eb65d9c8f8521fd510733e6f10667324d71
     name: "admin",
   },
   {

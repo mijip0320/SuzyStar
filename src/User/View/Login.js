@@ -5,16 +5,6 @@ import "./Login.css"
 // 피드백
 const Login = (props) => {
   let { lgnBtn, setLgnProp } = props;
-    // const [id, setId] = useState("");
-    // const [pasd, setPasd] = useState("");
-    // const onChange = e => lgnBtn(e.target.value)
-    // const onClick = () => {
-    //   alert(id+'님 로그인성공');
-    //   id('');
-    // };
-
- //onChange 명시 -> setstate로 id pasd값 가져오기 
- 
 
  return (
 
@@ -57,7 +47,7 @@ const Login = (props) => {
              style={{width: '180px', 
              margin: "20px 0px 0px 30px", 
              backgroundColor: "rgba(245, 240, 234, 0.6)"}} 
-             onClick={(e) => lgnBtn(this.users.UserStore)}
+             onClick={lgnBtn}
              >
                로그인
                </Button>   
