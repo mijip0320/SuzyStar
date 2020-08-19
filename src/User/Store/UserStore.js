@@ -61,6 +61,11 @@ class UserStore {
   }
 
   @action
+  setBasket(product) {
+    this.user.basket = this.user.basket.concat(product.id);
+  }
+
+  @action
   clearBasket() {
     this.user.basket = [];
   }
