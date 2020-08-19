@@ -12,10 +12,10 @@ class Etc extends Component {
           <Grid.Column>
             <Reveal animated="fade">
               <Reveal.Content visible>
-                <Image src="/etc_image/suzy1.png" size="large" />
+                <Image src="/etc_image/etc1-1.png" size="large" />
               </Reveal.Content>
               <Reveal.Content hidden>
-                <Image src="/etc_image/suzy2.png" size="large" />
+                <Image src="/etc_image/etc1.png" size="large" />
               </Reveal.Content>
             </Reveal>
           </Grid.Column>
@@ -25,17 +25,17 @@ class Etc extends Component {
                 <Image src="/etc_image/suzy1.png" size="large" />
               </Reveal.Content>
               <Reveal.Content hidden>
-                <Image src="/etc_image/suzy2.png" size="large" />
+                <Image src="/etc_image/etc2.png" size="large" />
               </Reveal.Content>
             </Reveal>
           </Grid.Column>
           <Grid.Column>
             <Reveal animated="fade">
               <Reveal.Content visible>
-                <Image src="/etc_image/suzy1.png" size="large" />
+                <Image src="/etc_image/suzy2.png" size="large" />
               </Reveal.Content>
               <Reveal.Content hidden>
-                <Image src="/etc_image/suzy2.png" size="large" />
+                <Image src="/etc_image/etc3.png" size="large" />
               </Reveal.Content>
             </Reveal>
           </Grid.Column>
