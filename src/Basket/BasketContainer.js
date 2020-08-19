@@ -10,6 +10,7 @@ class BasketContainer extends Component {
         const products = this.props.ProductStore.getProducts;
         const user = this.props.UserStore.getUser;
         const baskets = user.basket
+        console.log(baskets);
         return (
             <Basket products={products} baskets={baskets}/>
         );

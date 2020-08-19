@@ -5,13 +5,6 @@ class UserStore {
   @observable users = Users;
   @observable user = Users[0];
 
-  // 2.관리해야하는 state객체 @observable 선언, 초기화
-  @observable
-  users = Users; //Users(배열)
-
-  @observable
-  user = {}; //Users의 첫번째 객체를 가져와 초기화
-
   @observable
   loginUser = {};
  
