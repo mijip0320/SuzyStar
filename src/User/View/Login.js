@@ -4,7 +4,7 @@ import "./Login.css"
 
 // 피드백
 const Login = (props) => {
-  let { lgnBtn, setLgnProp } = props;
+  let { lgnBtn, setLgnProp, onCancel } = props;
 
  return (
 
@@ -12,7 +12,7 @@ const Login = (props) => {
   <Grid.Row centered  textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
 
-      <Header className='login-header' color='' textAlign='center' style={{margin: '0px 0px 50px 0px'}}>
+      <Header className='login-header' textAlign='center' style={{margin: '0px 0px 50px 0px'}}>
         Login
       </Header>
       
@@ -35,7 +35,9 @@ const Login = (props) => {
         />
 
             <ButtonGroup  style={{}}>
-             <Button floated='left' 
+             <Button 
+             onClick={onCancel}
+             floated='left' 
              style={{width: '180px', 
              margin: "20px 0px 0px 0px", 
              backgroundColor: "rgba(245, 240, 234, 0.6)"}}
@@ -54,8 +56,9 @@ const Login = (props) => {
             </ButtonGroup>              
         </Segment>
 
-      <pasd textAlign='center' 
-      style={{fontSize:'13px', 
+      <p
+      style={{ fontSize:'13px',
+      textAlign:"center", 
       margin: "20px 0px 0px 0px", 
       backgroundColor: "rgba(245, 240, 234, 0.1)"}}>
           아직 회원이 아니라면 회원가입하세요!
@@ -65,7 +68,7 @@ const Login = (props) => {
       backgroundColor: "rgba(245, 240, 234, 0.6)"}}>
         회원가입
       </Button>
-      </pasd>
+      </p>
 
     </Form>         
     </Grid.Column>

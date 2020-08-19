@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import Basket from './Basket';
 
-@inject("ProductStore", "UserStore")
+@inject("ProductStore", "UserStore", "MainStore")
 @observer
 class BasketContainer extends Component {
 
@@ -13,8 +13,7 @@ class BasketContainer extends Component {
     render() {
         const products = this.props.ProductStore.getProducts;
         const user = this.props.UserStore.getUser;
-        const baskets = user.basket
-        console.log(baskets);
+        const baskets = user.basket;
         return (
             <Basket products={products} baskets={baskets} onBuy={this.onBuy}/>
         );

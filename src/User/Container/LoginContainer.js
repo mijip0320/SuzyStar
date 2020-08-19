@@ -17,13 +17,15 @@ class LoginContainer extends Component {
       console.log(this.props.UserStore.getUser);
     }
   };
-
+  onCancel = () =>{
+    this.props.MainStore.setMainView("Home")
+  }
   render() {
     //user스토어에 있는 user state값 가져오기
     const { user } = this.props.UserStore;
 
     return (
-      <Login user={user} lgnBtn={this.lgnBtn} setLgnProp={this.setLgnProp} />
+      <Login onCancel={this.onCancel} user={user} lgnBtn={this.lgnBtn} setLgnProp={this.setLgnProp} />
     );
   }
 }

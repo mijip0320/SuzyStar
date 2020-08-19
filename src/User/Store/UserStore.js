@@ -3,7 +3,9 @@ import Users from "../Data/Users";
 // 1.Mobx store 클래스 선언
 class UserStore {
   @observable users = Users;
-  @observable user = {};
+  @observable user = {
+    userId:"guest",
+  };
 
   @observable
   loginUser = {};
