@@ -23,7 +23,6 @@ class ProductStore {
     return this.selectProducts;
   }
   @computed get getProduct() {
-    console.log(this.product);
     return this.product;
   }
   @computed get getOpen() {
@@ -53,6 +52,13 @@ class ProductStore {
     let updateName = "Update";
     let updatePrice = price;
     this.product = { ...this.product, pName: updateName, price: updatePrice };
+    this.selectProducts = this.products.map((product) =>
+      product.id === this.product.id
+        ? { ...product, pName: updateName, price: updatePrice }
+        : product
+    );
+    this.products = this.selectProducts;
+    this.setClose();
   }
 
   @action
@@ -60,17 +66,18 @@ class ProductStore {
     this.products = this.products.filter(
       (product) => this.product.id !== product.id
     );
+    this.selectProducts = this.selectProducts.filter(
+      (product) => this.product.id !== product.id
+    );
     this.setClose();
   }
 
   @action
   setSelectProducts(name) {
-    console.log(name);
     this.selectProducts = this.products.filter(
       (product) => product.property === name
     );
     this.selectMenu = name;
-    console.log(this.products);
   }
 }
 export default new ProductStore();

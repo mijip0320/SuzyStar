@@ -48,7 +48,6 @@ class UserStore {
     }
     this.user = this.loginUser;
   }
-  //기능2. alert
 }
 
 //객체를 생성해서 export

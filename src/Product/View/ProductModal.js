@@ -1,5 +1,3 @@
-// import React, { Component } from "react";
-
 import React, { useState } from "react";
 import { Button, Header, Image, Modal, Input } from "semantic-ui-react";
 
@@ -10,7 +8,7 @@ const ProductModal = (props) => {
     setPrice(updatePrice);
   };
 
-  let { open, onClose, product, user, onUpdate, onDelete } = props;
+  let { open, onClose, product, user, onUpdate, onDelete, addBasket } = props;
   return (
     <Modal open={open} onClose={onClose}>
       <Modal.Header>Product</Modal.Header>
@@ -53,7 +51,7 @@ const ProductModal = (props) => {
         <Button
           content="Basket"
           color="black"
-          onClick={onClose} //?
+          onClick={addBasket} //?
         ></Button>
         <Button
           content="Buy"

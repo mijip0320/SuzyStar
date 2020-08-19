@@ -12,12 +12,19 @@ class ProductItem extends Component {
   }
   
   getDataList() {
-    let { pageNum } = this.state;
-    let startNum, lastNum;
-    startNum = (pageNum - 1) * 3;
-    lastNum = pageNum * 3;
     let { products, onOpen } = this.props;
-    console.log(products);
+    let { pageNum } = this.state;
+    let pNum = pageNum;
+    if (Math.ceil(products.length / 3) < pageNum) {
+      pNum = 1;
+      this.setState({
+        pageNum: pNum,
+      });
+    }
+    let startNum, lastNum;
+    startNum = (pNum - 1) * 3;
+    lastNum = pNum * 3;
+
     let dataList = products.map((data, idx) =>
       idx >= startNum && idx < lastNum ? (
         <Card onClick={() => onOpen(data)} key={data.id} className="card-item">
@@ -36,7 +43,6 @@ class ProductItem extends Component {
         []
       )
     );
-    console.log(dataList);
     return dataList;
   }
   pageChange = (e, { activePage }) => {

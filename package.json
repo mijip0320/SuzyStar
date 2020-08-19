@@ -55,6 +55,7 @@
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.1",
     "react-dom": "^16.13.1",
+    "react-image-slider": "^0.1.0",
     "react-modal": "^3.11.2",
     "react-simple-image-slider": "^1.0.4",
     "react-slideshow-image": "^3.0.2",

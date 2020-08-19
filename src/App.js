@@ -1,14 +1,10 @@
 import "./App.css";
 import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
-import Header from "./View/Header";
-
-import Login from "./User/View/Login";
-import LoginContainer from "./User/Container/LoginContainer"
-import SignUp from "./User/View/SignUp";
-
+import HeaderContainer from "./Header/HeaderContainer";
 import Footer from "./View/Footer";
 import Main from "./MainPage/Main";
+import BasketContainer from "./Basket/BasketContainer"
 import { inject, observer } from "mobx-react";
 
 @inject("MainStore")
@@ -20,13 +16,17 @@ class App extends Component {
       <Grid>
         <Grid.Row>
           <Grid.Column>
-            <Header />
-            <LoginContainer />
-            <SignUp />
+            <HeaderContainer />
           </Grid.Column>
         </Grid.Row>
         {view === "Home" && <Main />}
-        {/* {view === "Login" && <Login />} */}
+        {view === "Login" && <h1>Login</h1>}
+        {view === "Basket" && <BasketContainer/>}
+        <Grid.Row>
+          <Grid.Column>
+            {/* <Revealer /> */}
+          </Grid.Column>
+        </Grid.Row>
         <Grid.Row>
           <Grid.Column>
             <Footer />

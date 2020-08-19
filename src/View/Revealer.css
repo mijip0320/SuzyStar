@@ -1,0 +1,10 @@
+.container {
+  margin-top: 5.2rem !important;
+  /* text-align: center !important; */
+}
+
+.container-image {
+  display: inline-block !important;
+  margin-left: 3rem !important;
+  cursor: pointer !important;
+}
