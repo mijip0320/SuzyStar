@@ -49,16 +49,15 @@ class ProductStore {
 
   @action
   updateProduct(price) {
-    let updateName = "Update";
     let updatePrice = price;
-    this.product = { ...this.product, pName: updateName, price: updatePrice };
+    this.product = { ...this.product, price: updatePrice };
     this.selectProducts = this.products.map((product) =>
       product.id === this.product.id
-        ? { ...product, pName: updateName, price: updatePrice }
+        ? { ...product, price: updatePrice }
         : product
     );
     this.products = this.selectProducts;
-    this.setClose();
+    alert("수정됐습니다.")
   }
 
   @action

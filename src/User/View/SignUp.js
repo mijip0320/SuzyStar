@@ -11,7 +11,7 @@ import {
 import "./SignUp.css";
 
 const SignUp = (props) => {
-  let { onCancel, onAddUser, onSignUpProp, toLogin } = props;
+  let { onAddUser, onSignUpProp, toLogin } = props;
   return (
     <Grid.Row
       centered
@@ -59,10 +59,12 @@ const SignUp = (props) => {
                 취소
               </Button> */}
               <Button
+              onClick={onAddUser}
                 fluid
                 onClick={onAddUser}
                 floated="right"
                 size="large"
+                onClick={onAddUser}
                 style={{
                   width: "28rem",
                   margin: "10px 0px 0px 0px",

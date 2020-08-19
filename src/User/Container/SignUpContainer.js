@@ -11,7 +11,14 @@ class SignUpContainer extends Component {
   };
 
   onAddUser = () => {
-    this.props.UserStore.addSignUp(this.props.UserStore.signUpUser);
+    console.log(
+      this.props.UserStore.addSignUp(this.props.UserStore.signUpUser)
+    );
+
+    if (this.props.UserStore.addSignUp(this.props.UserStore.signUpUser)) {
+      this.props.MainStore.setMainView("Login");
+      console.log("test");
+    }
   };
 
   toLogin = () => {
