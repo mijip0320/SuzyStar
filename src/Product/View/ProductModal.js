@@ -1,5 +1,3 @@
-// import React, { Component } from "react";
-
 import React, { useState } from "react";
 import { Button, Header, Image, Modal, Input } from "semantic-ui-react";
 

@@ -3,6 +3,7 @@ import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
 import Header from "./View/Header";
 import Footer from "./View/Footer";
+import Revealer from "./View/Revealer";
 import Main from "./Main/Main";
 import { inject, observer } from "mobx-react";
 
@@ -20,6 +21,11 @@ class App extends Component {
         </Grid.Row>
         {view === "Home" && <Main />}
         {/* {view === "Login" && <Login />} */}
+        <Grid.Row>
+          <Grid.Column>
+            <Revealer />
+          </Grid.Column>
+        </Grid.Row>
         <Grid.Row>
           <Grid.Column>
             <Footer />
