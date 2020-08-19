@@ -24,12 +24,14 @@ const ProductModal = (props) => {
           </p>
           <p>{product.price}</p>
           <br></br>
+          {user.userId === "admin" && <>
           <span>price : </span>
           <Input
             size="mini"
             placeholder={product.price}
             onChange={(e) => onChange(e)}
           />
+          </>}
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
