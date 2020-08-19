@@ -23,6 +23,8 @@ class LoginContainer extends Component {
 
     return (
       <Login user={user} lgnBtn={this.lgnBtn} setLgnProp={this.setLgnProp} />
+    
+
     );
   }
 }
