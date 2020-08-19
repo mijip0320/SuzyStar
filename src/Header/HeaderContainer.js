@@ -19,6 +19,9 @@ class HeaderContainer extends Component {
         else if(view === "Login"){
             this.props.MainStore.setMainView(view);
         }
+        else if(view === "Home"){
+            this.props.MainStore.setMainView(view);
+        }
         
     }
     render() {
