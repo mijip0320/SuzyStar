@@ -7,6 +7,8 @@ import Main from "./MainPage/Main";
 import BasketContainer from "./Basket/BasketContainer"
 import { inject, observer } from "mobx-react";
 
+import Login from "./User/View/Login";
+
 @inject("MainStore")
 @observer
 class App extends Component {
@@ -17,6 +19,7 @@ class App extends Component {
         <Grid.Row>
           <Grid.Column>
             <HeaderContainer />
+            <Login />
           </Grid.Column>
         </Grid.Row>
         {view === "Home" && <Main />}
