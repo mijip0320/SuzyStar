@@ -20,5 +20,9 @@ class HeaderContainer extends Component {
       this.props.MainStore.setMainView(view);
     }
   };
+  render() {
+    return <Header setView={this.setView} />;
+  }
+}
 
 export default HeaderContainer;
