@@ -23,7 +23,7 @@ const Login = (props) => {
           fluid icon='user' 
           iconPosition='left' 
           placeholder='ID'
-          onChange={(e) => setLgnProp("useId", e.target.value)}
+          onChange={(e) => setLgnProp("userId", e.target.value)}
           />
 
         <Form.Input 

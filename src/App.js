@@ -3,11 +3,10 @@ import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
 import HeaderContainer from "./Header/HeaderContainer";
 import Footer from "./View/Footer";
+import LoginContainer from "./User/Container/LoginContainer";
 import Main from "./MainPage/Main";
 import BasketContainer from "./Basket/BasketContainer"
 import { inject, observer } from "mobx-react";
-
-import Login from "./User/View/Login";
 
 @inject("MainStore")
 @observer
@@ -19,11 +18,10 @@ class App extends Component {
         <Grid.Row>
           <Grid.Column>
             <HeaderContainer />
-            <Login />
           </Grid.Column>
         </Grid.Row>
         {view === "Home" && <Main />}
-        {view === "Login" && <h1>Login</h1>}
+        {view === "Login" && <LoginContainer/>}
         {view === "Basket" && <BasketContainer/>}
         <Grid.Row>
           <Grid.Column>
