@@ -1,8 +1,24 @@
-import React from 'react'
-import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
+import React, { useState } from 'react'
+import { Button, Form, Grid, Header, Segment, ButtonGroup } from 'semantic-ui-react'
 import "./Login.css"
 
-const LoginForm = () => (
+// 피드백
+const Login = (props) => {
+  let { lgnBtn, setLgnProp } = props;
+    // const [id, setId] = useState("");
+    // const [pasd, setPasd] = useState("");
+    // const onChange = e => lgnBtn(e.target.value)
+    // const onClick = () => {
+    //   alert(id+'님 로그인성공');
+    //   id('');
+    // };
+
+ //onChange 명시 -> setstate로 id pasd값 가져오기 
+ 
+
+ return (
+
+  // 로그인 폼
   <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
 
@@ -12,42 +28,87 @@ const LoginForm = () => (
       
       <Form>
         <Segment stacked textAlign='left'>
-          <Form.Input label='ID' fluid icon='user' iconPosition='left' placeholder='ID' />
-            <Form.Input label='PW' fluid icon='lock' iconPosition='left' placeholder='PW' />
-            <Button color='' fluid size='large'>
-              로그인
-            </Button>
-        </Segment>
-    </Form>
-
-      <Form size='large' >
-        <Segment stacked textAlign='left'>
-          {/* 에러기능 추가시 */}
-          <Form.Input
-            error={{ content: 'ID가 입력되지 않았습니다.', pointing: 'below' }}
-            fluid icon='user' 
-            iconPosition='left'
-            label='ID'
-            placeholder='ID'
-            id='form-input-id'
-          />
-    
           <Form.Input 
-            error='PW가 입력되지 않았습니다.'
-            fluid icon='lock' 
-            iconPosition='left'
-            label='PW'
-            placeholder='PW'
-            id='form-input-pwd'
+          label='ID' 
+          fluid icon='user' 
+          iconPosition='left' 
+          placeholder='ID'
+          onChange={(e) => setLgnProp("useId", e.target.value)}
           />
 
-          <Button color='' fluid size='large'>
-            로그인
-          </Button>
+        <Form.Input 
+        label='PW' 
+        fluid icon='lock' 
+        iconPosition='left' 
+        placeholder='PW' 
+        onChange={(e) => setLgnProp("pasd", e.target.value)}
+        />
+
+            <ButtonGroup  style={{}}>
+             <Button floated='left' 
+             style={{width: '180px', 
+             margin: "20px 0px 0px 0px", 
+             backgroundColor: "rgba(245, 240, 234, 0.6)"}}
+             >
+               취소
+               </Button>
+
+             <Button floated='right' 
+             style={{width: '180px', 
+             margin: "20px 0px 0px 30px", 
+             backgroundColor: "rgba(245, 240, 234, 0.6)"}} 
+             onClick={(e) => lgnBtn(this.users.UserStore)}
+             >
+               로그인
+               </Button>   
+            </ButtonGroup>              
         </Segment>
-      </Form>     
+
+      <pasd textAlign='center' 
+      style={{fontSize:'13px', 
+      margin: "20px 0px 0px 0px", 
+      backgroundColor: "rgba(245, 240, 234, 0.1)"}}>
+          아직 회원이 아니라면 회원가입하세요!
+      
+      <Button fluid size='large' 
+      style={{margin: "10px 0px 0px 0px", 
+      backgroundColor: "rgba(245, 240, 234, 0.6)"}}>
+        회원가입
+      </Button>
+      </pasd>
+
+    </Form>         
     </Grid.Column>
   </Grid>
-)
+  );
+ }
+export default Login;
 
-export default LoginForm
+
+// const Login = () => {
+  //   const [form, setForm] = useState({
+  //     id: '',
+  //     pasd: ''
+  //   });
+  //   const { id, pasd } = form;
+  //   const onChange = e => {
+  //     setTimeout(() => console.log(e), 500);
+  //     const nextForm = {
+  //       ...form, // 기존의 form 내용을 이 자리에 복사 한 뒤
+  //       [e.target.name]: e.target.value // 원하는 값을 덮어씌우기
+  //     };
+  //     setForm(nextForm);
+  //   };
+  //   const onClick = () => {
+  //     alert(id + ': ' + pasd);
+  //     setForm({
+  //       id: '',
+  //       pasd: ''
+  //     });
+  //   };
+  //   const onKeyPress = e => {
+  //     if (e.key === 'Enter') {
+  //       onClick();
+  //     }
+  //   };
+ 

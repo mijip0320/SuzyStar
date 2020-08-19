@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import HeaderContainer from "./Header/HeaderContainer";
 import Footer from "./View/Footer";
 import Main from "./MainPage/Main";
-import Basket from "./Basket/Basket"
+import BasketContainer from "./Basket/BasketContainer"
 import { inject, observer } from "mobx-react";
 
 @inject("MainStore")
@@ -21,7 +21,12 @@ class App extends Component {
         </Grid.Row>
         {view === "Home" && <Main />}
         {view === "Login" && <h1>Login</h1>}
-        {view === "Basket" && <Basket/>}
+        {view === "Basket" && <BasketContainer/>}
+        <Grid.Row>
+          <Grid.Column>
+            {/* <Revealer /> */}
+          </Grid.Column>
+        </Grid.Row>
         <Grid.Row>
           <Grid.Column>
             <Footer />

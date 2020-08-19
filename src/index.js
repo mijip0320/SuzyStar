@@ -7,8 +7,7 @@ import { Provider } from "mobx-react";
 import "semantic-ui-css/semantic.min.css";
 import ProductStore from "./Product/Store/ProductStore";
 import UserStore from "./User/Store/UserStore";
-import MainStore from "./MainPage/MainStore";
-
+import MainStore from "./MainPage/MainStore"
 ReactDOM.render(
   <Provider
     MainStore={MainStore}

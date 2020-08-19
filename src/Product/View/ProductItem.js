@@ -10,6 +10,7 @@ class ProductItem extends Component {
       pageNum: 1,
     };
   }
+  
   getDataList() {
     let { products, onOpen } = this.props;
     let { pageNum } = this.state;

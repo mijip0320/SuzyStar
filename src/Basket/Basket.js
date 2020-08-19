@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import { Grid, Header, Card, Image } from 'semantic-ui-react';
 import "./Basket.css";
-import { inject, observer } from 'mobx-react';
 
-@inject("ProductStore", "UserStore")
-@observer
 class Basket extends Component {
     getDataList() {
-        let products = this.props.ProductStore.getProducts;
-        let user = this.props.UserStore.getUser;
-        const baskets = user.basket;
+        let {products, baskets} = this.props;
         
         let dataList = products.map((data) => baskets.find(basket => data.id === basket) ?
         (
@@ -27,7 +22,6 @@ class Basket extends Component {
             </Card>
         ) : []
         );
-        console.log(dataList);
         return dataList;
       }
     render() {
