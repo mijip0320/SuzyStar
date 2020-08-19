@@ -225,7 +225,7 @@ const Products = [
     detailImgUrl3: "product_image/19-3.png",
     des:
       "- 상품 : 타올\n - 소재 : COTTON\n - 사이즈(CM) : 30x40x2\n - 판매원 : SM BRAND MARKETING\n - 제조국 : 한국\n - 제조년월 : 2020.03",
-    property: "Accessory",
+    property: "Living",
   },
   {
     id: 20,
