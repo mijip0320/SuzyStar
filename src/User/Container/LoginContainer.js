@@ -25,13 +25,7 @@ class LoginContainer extends Component {
     const { user } = this.props.UserStore;
 
     return (
-<<<<<<< HEAD
-      <Login user={user} lgnBtn={this.lgnBtn} setLgnProp={this.setLgnProp} />
-    
-
-=======
       <Login onCancel={this.onCancel} user={user} lgnBtn={this.lgnBtn} setLgnProp={this.setLgnProp} />
->>>>>>> f097966b37e43ebd205845132aab21d16a379b43
     );
   }
 }
