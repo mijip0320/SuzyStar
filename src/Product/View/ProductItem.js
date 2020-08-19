@@ -10,6 +10,7 @@ class ProductItem extends Component {
       pageNum: 1,
     };
   }
+  
   getDataList() {
     let { pageNum } = this.state;
     let startNum, lastNum;

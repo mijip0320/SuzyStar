@@ -1,8 +1,8 @@
 const Users = [
   {
-    userId: "suzy1",
+    userId: "admin",
     pasd: "111",
-    name: "kim",
+    name: "admin",
   },
   {
     userId: "suzy2",
