@@ -4,12 +4,15 @@ import Users from "../Data/Users";
 class UserStore {
   @observable users = Users;
   @observable user = {
-    userId:"guest",
+    userId: "guest",
   };
 
   @observable
   loginUser = {};
- 
+
+  @observable
+  signUpUser = {};
+
   @computed
   get getUser() {
     return this.user ? { ...this.user } : {};
@@ -20,7 +23,7 @@ class UserStore {
     return this.users ? { ...this.users } : [];
   }
 
-//입력창에 데이터가 입력된다
+  //입력창에 데이터가 입력된다
   @action
   setLgnProp(key, value) {
     this.loginUser = {
@@ -29,7 +32,16 @@ class UserStore {
     };
   }
 
-//기능1. 로그인 버튼 클릭 이벤트 설정
+  @action
+  setSignUpProp(name, value) {
+    this.signUpUser = {
+      ...this.signUpUser,
+      [name]: value,
+    };
+    console.log(this.signUpUser);
+  }
+
+  //기능1. 로그인 버튼 클릭 이벤트 설정
   @action
   login() {
     if (
@@ -37,7 +49,9 @@ class UserStore {
       this.users.find((user) => user.pasd === this.loginUser.pasd)
     ) {
       alert("로그인 성공!");
-      this.user = this.users.find(user=>user.userId === this.loginUser.userId);
+      this.user = this.users.find(
+        (user) => user.userId === this.loginUser.userId
+      );
 
       return true;
     } else {
@@ -47,13 +61,23 @@ class UserStore {
   }
 
   @action
-  setBasket(product){
+  setBasket(product) {
     this.user.basket = this.user.basket.concat(product.id);
   }
 
   @action
-  clearBasket(){
+  clearBasket() {
     this.user.basket = [];
+  }
+
+  @action
+  addSignUp(signUpUser) {
+    // console.log(this.signUpUser);
+    let tempUser = { ...signUpUser, basket: [] };
+    this.users = this.users.concat(tempUser);
+    // console.log(this.users);
+    this.signUpUser = {};
+    alert("회원가입 완료!");
   }
 }
 

@@ -9,7 +9,8 @@ class Footer extends Component {
           inverted
           vertical
           style={{
-            //   padding: "5em 0em",
+            //  style={{margin: "20px 0px 0px 0px"
+            padding: "2em",
             // position: "absolute",
             // left: "0px",
             // bottom: "0px",
@@ -17,19 +18,19 @@ class Footer extends Component {
             fixed: "bottom",
           }}
         >
-          <Container>
+          <Container style={{margin: "50px 0px 50px 0px"}}>
             <Grid divided inverted stackable>
               <Grid.Row>
                 <Grid.Column width={3}>
-                  <Header inverted as="h4" content="About" />
+                  <Header inverted as="h3" content="About" />
                   <List link inverted>
                     <List.Item as="a">Sitemap</List.Item>
                     <List.Item as="a">Contact Us</List.Item>
                     <List.Item as="a">Github</List.Item>
                   </List>
                 </Grid.Column>
-                <Grid.Column width={3}>
-                  <Header inverted as="h4" content="Services" />
+                <Grid.Column width={4}>
+                  <Header inverted as="h3" content="Services" />
                   <List link inverted>
                     <List.Item as="a">Suzy Official Site</List.Item>
                     <List.Item as="a">FAQ</List.Item>
@@ -37,8 +38,8 @@ class Footer extends Component {
                     <List.Item as="a">Favorite X-Men</List.Item>
                   </List>
                 </Grid.Column>
-                <Grid.Column width={7}>
-                  <Header as="h4" inverted>
+                <Grid.Column width={9}>
+                  <Header as="h3" inverted>
                     Footer Header
                   </Header>
                   <p>

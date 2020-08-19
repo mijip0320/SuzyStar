@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { inject, observer } from 'mobx-react';
-import Header from "./Header"
+import React, { Component } from "react";
+import { inject, observer } from "mobx-react";
+import Header from "./Header";
 
 @inject("MainStore", "UserStore")
 @observer
@@ -29,6 +29,6 @@ class HeaderContainer extends Component {
             <Header setView={this.setView}/>
         );
     }
-}
+  };
 
 export default HeaderContainer;
