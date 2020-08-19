@@ -8,7 +8,7 @@ export default class MenuExampleSecondaryPointing extends Component {
 
   render() {
     const { activeItem } = this.state;
-
+    const {setView} = this.props;
     return (
       <header style={{ margin: "70px 0px 0px 0px" }}>
         {/*위오아왼 */}
@@ -20,9 +20,10 @@ export default class MenuExampleSecondaryPointing extends Component {
         >
           <Menu.Item position="right">
             <Image
+            onClick={()=>setView("Home")}
               size="tiny"
               src="etc_image/logo.png"
-              style={{ margin: "10px 0px 10px 200px" }}
+              style={{ margin: "10px 0px 10px 200px", cursor:"pointer" }}
             />
             {/*위오아왼 */}
           </Menu.Item>
@@ -33,7 +34,9 @@ export default class MenuExampleSecondaryPointing extends Component {
                 size="large"
                 color="grey"
                 name="user"
-                onClick={this.handleItemClick}
+                onClick={()=>{
+                  setView("Login")
+                }}
               />
             </Menu.Item>
 
@@ -42,7 +45,7 @@ export default class MenuExampleSecondaryPointing extends Component {
                 size="large"
                 color="grey"
                 name="cart"
-                onClick={this.handleItemClick}
+                onClick={()=>setView("Basket")}
               />
             </Menu.Item>
 

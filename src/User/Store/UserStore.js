@@ -1,4 +1,4 @@
-import { observable, computed } from "mobx";
+import { observable, computed, action } from "mobx";
 import Users from "../Data/Users";
 
 class UserStore {
@@ -10,6 +10,11 @@ class UserStore {
   }
   @computed get getUser() {
     return this.user;
+  }
+
+  @action
+  setBasket(product){
+    this.user.basket = this.user.basket.concat(product.id);
   }
 }
 export default new UserStore();

@@ -14,6 +14,11 @@ class ProductModalContainer extends Component {
   onDelete = () => {
     this.props.ProductStore.deleteProduct();
   };
+  addBasket = () =>{
+    let product = this.props.ProductStore.getProduct;
+    this.props.UserStore.setBasket(product);
+    this.onClose();
+  }
   render() {
     const user = this.props.UserStore.getUser;
     const open = this.props.ProductStore.getOpen;
@@ -24,6 +29,7 @@ class ProductModalContainer extends Component {
         onClose={this.onClose}
         onUpdate={this.onUpdate}
         onDelete={this.onDelete}
+        addBasket={this.addBasket}
         product={product}
         user={user}
       />

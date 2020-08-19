@@ -1,0 +1,11 @@
+.basket-container {
+    padding-top: 2rem;
+    margin: 0 auto;
+    width: 88%;
+}
+
+.card-item {
+    margin-top: 2rem !important;
+    width: 25rem !important;
+    cursor: pointer;
+}

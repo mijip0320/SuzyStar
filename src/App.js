@@ -1,9 +1,10 @@
 import "./App.css";
 import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
-import Header from "./View/Header";
+import HeaderContainer from "./Header/HeaderContainer";
 import Footer from "./View/Footer";
 import Main from "./MainPage/Main";
+import Basket from "./Basket/Basket"
 import { inject, observer } from "mobx-react";
 
 @inject("MainStore")
@@ -15,11 +16,12 @@ class App extends Component {
       <Grid>
         <Grid.Row>
           <Grid.Column>
-            <Header />
+            <HeaderContainer />
           </Grid.Column>
         </Grid.Row>
         {view === "Home" && <Main />}
-        {/* {view === "Login" && <Login />} */}
+        {view === "Login" && <h1>Login</h1>}
+        {view === "Basket" && <Basket/>}
         <Grid.Row>
           <Grid.Column>
             <Footer />
