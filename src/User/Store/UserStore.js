@@ -75,7 +75,7 @@ class UserStore {
     let tempUser = { ...signUpUser, basket: [] };
     this.users = this.users.concat(tempUser);
     this.signUpUser = {};
-    alert("회원가입 완료!");
+
     return true;
   }
 }

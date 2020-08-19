@@ -16,6 +16,7 @@ class SignUpContainer extends Component {
     );
 
     if (this.props.UserStore.addSignUp(this.props.UserStore.signUpUser)) {
+      alert("회원가입 완료!");
       this.props.MainStore.setMainView("Login");
       console.log("test");
     }

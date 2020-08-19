@@ -28,7 +28,7 @@ class App extends Component {
         <Grid.Row>
           <Grid.Column>{/* <Revealer /> */}</Grid.Column>
         </Grid.Row>
-        <Grid.Row>
+        <Grid.Row style={{paddingBottom:0}}>
           <Grid.Column>
             <Footer />
           </Grid.Column>

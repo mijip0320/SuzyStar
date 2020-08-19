@@ -59,10 +59,12 @@ const SignUp = (props) => {
                 취소
               </Button> */}
               <Button
-              onClick={onAddUser}
+                onClick={onAddUser}
                 fluid
+                onClick={onAddUser}
                 floated="right"
                 size="large"
+                // eslint-disable-next-line react/jsx-no-duplicate-props
                 onClick={onAddUser}
                 style={{
                   width: "28rem",
