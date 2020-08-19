@@ -32,9 +32,7 @@ class Basket extends Component {
                     <div className="basket-container">
                 <Header as="h1" className="basket-header">Basket</Header>
                 <Button 
-                onClick={()=>{
-                  alert("구매에 성공하였습니다.")
-                }}
+                onClick={this.props.onBuy}
                 className="basket-button"
           content="Buy"
           labelPosition="right"

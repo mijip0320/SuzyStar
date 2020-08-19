@@ -9,7 +9,7 @@ const Login = (props) => {
  return (
 
   // 로그인 폼
-  <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+  <Grid.Row centered  textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
 
       <Header className='login-header' color='' textAlign='center' style={{margin: '0px 0px 50px 0px'}}>
@@ -69,7 +69,7 @@ const Login = (props) => {
 
     </Form>         
     </Grid.Column>
-  </Grid>
+  </Grid.Row>
   );
  }
 export default Login;

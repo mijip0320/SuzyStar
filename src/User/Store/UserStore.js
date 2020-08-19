@@ -3,7 +3,7 @@ import Users from "../Data/Users";
 // 1.Mobx store 클래스 선언
 class UserStore {
   @observable users = Users;
-  @observable user = Users[0];
+  @observable user = {};
 
   @observable
   loginUser = {};
@@ -35,10 +35,18 @@ class UserStore {
       this.users.find((user) => user.pasd === this.loginUser.pasd)
     ) {
       alert("로그인 성공!");
+      this.user = this.users.find(user=>user.userId === this.loginUser.userId);
+
+      return true;
     } else {
       alert("아이디 또는 비밀번호가 일치하지 않습니다. 다시 시도해 주세요.");
+      return false;
     }
-    this.user = this.loginUser;
+  }
+
+  @action
+  clearBasket(){
+    this.user.basket = [];
   }
 }
 
