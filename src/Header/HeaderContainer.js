@@ -30,9 +30,6 @@ class HeaderContainer extends Component {
         );
     }
   };
-  render() {
-    return <Header setView={this.setView} />;
-  }
-}
+
 
 export default HeaderContainer;
