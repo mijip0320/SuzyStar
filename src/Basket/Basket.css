@@ -3,6 +3,11 @@
   margin: 0 auto;
   width: 88%;
 }
+
+.basket-minheiht {
+  min-height: 50rem;
+}
+
 .basket-header {
   padding-left: 2rem !important;
 }
@@ -12,6 +17,7 @@
   top: 2rem !important;
   right: 9rem !important;
 }
+
 .card-item {
   margin-top: 2rem !important;
   width: 25rem !important;
