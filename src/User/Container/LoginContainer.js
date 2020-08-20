@@ -10,11 +10,11 @@ class LoginContainer extends Component {
     this.props.UserStore.setLgnProp(key, value);
   };
 
-  //로그인 이벤트 발생
+  //로그인 이벤트 발생 ->login이 정상 작동하면 메인 화면으로 이동
   lgnBtn = () => {
     if (this.props.UserStore.login()) {
       this.props.MainStore.setMainView("Home");
-      console.log(this.props.UserStore.getUser);
+      // console.log(this.props.UserStore.getUser);
     }
   };
   onCancel = () => {

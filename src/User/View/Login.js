@@ -38,6 +38,8 @@ const Login = (props) => {
               icon="user"
               iconPosition="left"
               placeholder="ID"
+              // setLgnProp함수를 만들어서 현재 사용자가 입력한 객체의 속성들을 가져옴
+
               onChange={(e) => setLgnProp("userId", e.target.value)}
             />
 
@@ -47,6 +49,7 @@ const Login = (props) => {
               icon="lock"
               iconPosition="left"
               placeholder="PW"
+              // setLgnProp함수를 만들어서 현재 사용자가 입력한 객체의 속성들을 가져옴
               onChange={(e) => setLgnProp("pasd", e.target.value)}
             />
 
@@ -70,6 +73,7 @@ const Login = (props) => {
                   margin: "20px 0px 0px 30px",
                   backgroundColor: "rgba(245, 240, 234, 0.6)",
                 }}
+                // 로그인 버튼 클릭 시 발생하는 이벤트 ->로그인 발생
                 onClick={lgnBtn}
               >
                 로그인
