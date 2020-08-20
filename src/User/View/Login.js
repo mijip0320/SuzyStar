@@ -38,6 +38,8 @@ const Login = (props) => {
               icon="user"
               iconPosition="left"
               placeholder="ID"
+              //input창에 입력된 데이터 감지 -> setLgnProp함수를 만든다.
+              // 현재 사용자가 입력한 객체의 속성의 어떤 targetvalue인지 가져온다.
               onChange={(e) => setLgnProp("userId", e.target.value)}
             />
 
@@ -47,6 +49,8 @@ const Login = (props) => {
               icon="lock"
               iconPosition="left"
               placeholder="PW"
+              //input창에 입력된 데이터 감지 -> setLgnProp함수를 만든다.
+              // 현재 사용자가 입력한 객체의 속성의 어떤 targetvalue인지 가져온다.
               onChange={(e) => setLgnProp("pasd", e.target.value)}
             />
 

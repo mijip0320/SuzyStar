@@ -21,7 +21,7 @@ export default class MenuExampleSecondaryPointing extends Component {
           <Menu.Item position="right">
             <Image
             onClick={()=>setView("Home")}
-              size="tiny"
+              size="small"
               src="etc_image/logo.png"
               style={{ margin: "10px 0px 10px 200px", cursor:"pointer" }}
             />

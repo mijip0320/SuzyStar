@@ -11,6 +11,10 @@ import {
 import "./SignUp.css";
 
 const SignUp = (props) => {
+  //1. 세개의 함수를 쓰겠다고 선언한다.
+  //onAddUser: 회원가입 해주는 함수
+  //onSignUpProp: 입력받은 값을 가져오는 함수
+  //toLogin: 로그인창으로 이동(회원가입 완료시 자동으로 로그인창으로 이동)
   let { onAddUser, onSignUpProp, toLogin } = props;
   return (
     <Grid.Row
@@ -33,6 +37,7 @@ const SignUp = (props) => {
             <Form.Input
               label="NAME"
               placeholder=""
+              //2. 입력창에서의 값가져오기
               onChange={(e) => onSignUpProp("name", e.target.value)}
             />
             <Form.Input
@@ -59,9 +64,9 @@ const SignUp = (props) => {
                 취소
               </Button> */}
               <Button
+              //3. onAddUser
                 onClick={onAddUser}
                 fluid
-                onClick={onAddUser}
                 floated="right"
                 size="large"
                 // eslint-disable-next-line react/jsx-no-duplicate-props
@@ -88,6 +93,7 @@ const SignUp = (props) => {
             이미 회원이시라면 로그인하세요!
             <Button
               fluid
+              //4. toLogin버튼
               onClick={toLogin}
               size="large"
               style={{

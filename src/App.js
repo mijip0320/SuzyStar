@@ -13,6 +13,7 @@ import SignUpContainer from "./User/Container/SignUpContainer";
 @observer
 class App extends Component {
   render() {
+    //
     let view = this.props.MainStore.getMainView;
     return (
       <Grid>
@@ -21,6 +22,11 @@ class App extends Component {
             <HeaderContainer />
           </Grid.Column>
         </Grid.Row>
+        {/* 
+        1.Main.js의 Main을 불러온다 
+        2. SignUpContainer.js의 toLogin의 화면 이동 설정을 App.js에서 해준다.
+        */}
+
         {view === "Home" && <Main />}
         {view === "Login" && <LoginContainer />}
         {view === "Basket" && <BasketContainer />}
