@@ -1,3 +1,5 @@
+//BasketContainer로부터 받은 정보로 View 구성
+
 import React, { Component } from 'react';
 import { Grid, Header, Card, Image, Button } from 'semantic-ui-react';
 import "./Basket.css";
@@ -5,7 +7,8 @@ import "./Basket.css";
 class Basket extends Component {
     getDataList() {
         let {products, baskets} = this.props;
-        
+
+        //기존 상품리스트에서 baskets에 해당하는 값만 출력
         let dataList = products.map((data) => baskets.find(basket => data.id === basket) ?
         (
             <Card key={data.id} className="card-item">
@@ -31,6 +34,8 @@ class Basket extends Component {
                 <Grid.Column>
                     <div className="basket-container">
                 <Header as="h1" className="basket-header">Basket</Header>
+
+                {/* 구매버튼을 이용해서 장바구니 초기화 */}
                 <Button 
                 onClick={this.props.onBuy}
                 className="basket-button"

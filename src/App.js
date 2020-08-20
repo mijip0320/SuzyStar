@@ -2,16 +2,17 @@ import "./App.css";
 import { Grid } from "semantic-ui-react";
 import React, { Component } from "react";
 import HeaderContainer from "./Header/HeaderContainer";
-import Footer from "./View/Footer";
+import Footer from "./Footer/Footer";
 import LoginContainer from "./User/Container/LoginContainer";
 import Main from "./MainPage/Main";
 import BasketContainer from "./Basket/BasketContainer";
 import { inject, observer } from "mobx-react";
 import SignUpContainer from "./User/Container/SignUpContainer";
 
+
+
 @inject("MainStore")
 @observer
-
 /*Header, Container: Main, Login, Basket, Signup, Footer 설정*/
 class App extends Component {
   render() {

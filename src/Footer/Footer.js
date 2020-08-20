@@ -1,3 +1,5 @@
+//Foote View 구성
+
 import React, { Component } from "react";
 import { Header, List, Segment, Grid, Container } from "semantic-ui-react";
 
@@ -9,12 +11,7 @@ class Footer extends Component {
           inverted
           vertical
           style={{
-            //  style={{margin: "20px 0px 0px 0px"
             padding: "2em",
-            // position: "absolute",
-            // left: "0px",
-            // bottom: "0px",
-            // right: "0px",
             fixed: "bottom",
           }}
         >
