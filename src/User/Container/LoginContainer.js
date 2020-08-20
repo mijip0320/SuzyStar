@@ -12,9 +12,7 @@ class LoginContainer extends Component {
     this.props.UserStore.setLgnProp(key, value);
   };
 
-  //2)로그인 이벤트 발생
-  //lgnBtn을 눌렀을 때 lgin함수가 정상 작동되면
-  //Home으로 이동
+  //로그인 이벤트 발생 ->login이 정상 작동하면 메인 화면으로 이동
   lgnBtn = () => {
     if (this.props.UserStore.login()) {
       this.props.MainStore.setMainView("Home");
@@ -31,7 +29,6 @@ class LoginContainer extends Component {
     this.props.MainStore.setMainView("Home");
   };
 
-  
   onSignUp = () => {
     this.props.MainStore.setMainView("SignUp");
   };

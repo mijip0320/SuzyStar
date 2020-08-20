@@ -11,10 +11,9 @@ import {
 import "./SignUp.css";
 
 const SignUp = (props) => {
-  //1. 세개의 함수를 쓰겠다고 선언한다.
-  //onAddUser: 회원가입 해주는 함수
-  //onSignUpProp: 입력받은 값을 가져오는 함수
-  //toLogin: 로그인창으로 이동(회원가입 완료시 자동으로 로그인창으로 이동)
+  //onAddUser => 회원가입
+  //onSignUpProp =>회원가입 당시 입력한 값을 받아옴
+  //toLogin =>회원가입 완료시 자동으로 로그인 창으로 이동
   let { onAddUser, onSignUpProp, toLogin } = props;
   return (
     <Grid.Row
@@ -64,13 +63,11 @@ const SignUp = (props) => {
                 취소
               </Button> */}
               <Button
-              //3. onAddUser
+                // 회원가입 이벤트 발생
                 onClick={onAddUser}
                 fluid
                 floated="right"
                 size="large"
-                // eslint-disable-next-line react/jsx-no-duplicate-props
-                onClick={onAddUser}
                 style={{
                   width: "28rem",
                   margin: "10px 0px 0px 0px",
@@ -91,6 +88,7 @@ const SignUp = (props) => {
             }}
           >
             이미 회원이시라면 로그인하세요!
+            {/* 로그인 창으로 이동 */}
             <Button
               fluid
               //4. toLogin버튼

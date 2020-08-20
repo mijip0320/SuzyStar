@@ -5,6 +5,7 @@ import ProductListContainer from "../Product/Container/ProductListContainer";
 import ProductItemContainer from "../Product/Container/ProductItemContainer";
 import Etc from "../View/Etc";
 
+/*이미지 슬라이딩부터 etc까지가 main.js에 해당*/
 const Main = () => {
   return (
     <>

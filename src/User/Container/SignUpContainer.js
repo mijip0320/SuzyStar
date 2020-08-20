@@ -5,7 +5,8 @@ import SignUp from "../View/SignUp";
 @inject("UserStore", "MainStore")
 @observer
 class SignUpContainer extends Component {
-  //2. 입력창에 값 받아옴 (name을 key로 해도됨)
+  //입력창에 값 받아옴
+  //해당 name값에 입력된 value을 받아옴
   onSignUpProp = (name, value) => {
     this.props.UserStore.setSignUpProp(name, value);
   };
