@@ -36,6 +36,7 @@ const SignUp = (props) => {
             <Form.Input
               label="NAME"
               placeholder=""
+              //2. 입력창에서의 값가져오기
               onChange={(e) => onSignUpProp("name", e.target.value)}
             />
             <Form.Input
@@ -90,6 +91,7 @@ const SignUp = (props) => {
             {/* 로그인 창으로 이동 */}
             <Button
               fluid
+              //4. toLogin버튼
               onClick={toLogin}
               size="large"
               style={{

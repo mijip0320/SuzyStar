@@ -15,6 +15,7 @@ import SignUpContainer from "./User/Container/SignUpContainer";
 /*Header, Container: Main, Login, Basket, Signup, Footer 설정*/
 class App extends Component {
   render() {
+    //
     let view = this.props.MainStore.getMainView;
     return (
       <Grid>

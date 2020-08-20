@@ -11,6 +11,7 @@ class SignUpContainer extends Component {
     this.props.UserStore.setSignUpProp(name, value);
   };
 
+  //3. if의 조건이 true면 alert을 띄우고 로그인 창으로 이동
   onAddUser = () => {
     if (this.props.UserStore.addSignUp(this.props.UserStore.signUpUser)) {
       alert("회원가입 완료!");
@@ -18,6 +19,7 @@ class SignUpContainer extends Component {
     }
   };
 
+  //1. 로그인 화면이동
   toLogin = () => {
     this.props.MainStore.setMainView("Login");
   };
@@ -26,6 +28,7 @@ class SignUpContainer extends Component {
     const { signUpUser } = this.props.UserStore;
 
     return (
+      //4. 위의 함수를 불러올 수 있게 셋업
       <SignUp
         signUpUser={signUpUser}
         onSignUpProp={this.onSignUpProp}
