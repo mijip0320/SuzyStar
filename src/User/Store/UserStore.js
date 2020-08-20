@@ -70,6 +70,8 @@ class UserStore {
       this.users.find((user) => user.userId === this.loginUser.userId) &&
       this.users.find((user) => user.pasd === this.loginUser.pasd)
     ) {
+      console.log(this.user);
+      console.log(this.users);
       alert("로그인 성공!");
       //세션유지?
       this.user = this.users.find(
