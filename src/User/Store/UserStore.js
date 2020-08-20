@@ -38,6 +38,13 @@ class UserStore {
       [key]: value,
     };
   }
+  
+  @action
+  setGuest(){
+    this.user = {
+      userId : "guest"
+    }
+  }
 
   //6. 
   @action

@@ -27,7 +27,7 @@ class Basket extends Component {
     render() {
         let dataList = this.getDataList();
         return (
-            <Grid.Row >
+            <Grid.Row className="basket-minheiht" >
                 <Grid.Column>
                     <div className="basket-container">
                 <Header as="h1" className="basket-header">Basket</Header>

@@ -17,7 +17,14 @@ class HeaderContainer extends Component {
             }
         }
         else if(view === "Login"){
-            this.props.MainStore.setMainView(view);
+            if(user.userId === "guest"){
+                this.props.MainStore.setMainView(view);
+            }
+            else{
+                alert("로그아웃 되었습니다.")
+                this.props.UserStore.setGuest();
+                this.props.MainStore.setMainView("Home")
+            }
         }
         else if(view === "Home"){
             this.props.MainStore.setMainView(view);
