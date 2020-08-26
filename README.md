@@ -6,7 +6,7 @@ Kpop의 영향력으로 인해 전세계적으로 커지면서 아이돌 또는 
 
 **완성된 페이지**는 아래와 같다.
 
-![[suzyStar] Untitled 3](public\readme_image\main.png)
+![[suzyStar] Untitled 3](readme_image\main.png)
 
 
 
