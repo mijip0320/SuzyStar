@@ -10,7 +10,11 @@ class UserStore {
 
   //2. 입력하는 Id와 pasd를 객체로 받아온다.
   @observable
-  loginUser = {}; //입력하는 아이디와 비밀번호를 객체로 받아옴
+  loginUser = {
+    userId: "",
+    pasd: "",
+    name: "",
+  }; //입력하는 아이디와 비밀번호를 객체로 받아옴
 
   //5. 입력받은 값을 가져올 수 있는 객체 생성(SignUpContainer 돌고 옴)
   @observable
@@ -42,12 +46,12 @@ class UserStore {
       [key]: value,
     };
   }
-  
+
   @action
-  setGuest(){
+  setGuest() {
     this.user = {
-      userId : "guest"
-    }
+      userId: "guest",
+    };
   }
 
   //6.
