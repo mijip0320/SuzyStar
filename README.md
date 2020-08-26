@@ -6,7 +6,7 @@ Kpop의 영향력으로 인해 전세계적으로 커지면서 아이돌 또는 
 
 **완성된 페이지**는 아래와 같다.
 
-![[suzyStar] Untitled 3](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\main.png)
+![[suzyStar] Untitled 3](public\readme_image\main.png)
 
 
 
@@ -14,13 +14,13 @@ Kpop의 영향력으로 인해 전세계적으로 커지면서 아이돌 또는 
 
 - [ ] 개발 기간: 8/14~8/19
 
-  ![[suzyStar] Untitled 3](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\developDate.png)
+  ![[suzyStar] Untitled 3](\public\readme_image\developDate.png)
 
   
 
 - [ ] 개발범위 - 전체 Layout(헤더, 이미지 슬라이드, 상품리스트(메뉴, 상품리스트), 상품 외 콘텐츠, 푸터)
 
-<img style="max-height:90%; max-width:90%;" src="C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\[suzyStar] Untitled.png" alt="[suzyStar] Untitled"  />
+<img style="max-height:90%; max-width:90%;" src="\public\readme_image\[suzyStar] Untitled.png" alt="[suzyStar] Untitled"  />
 
 
 
@@ -29,7 +29,7 @@ Kpop의 영향력으로 인해 전세계적으로 커지면서 아이돌 또는 
   2. 로그인 성공 시 alert 창과 함께 메인페이지로 자동 이동
   3. 로그인 실패 시 alert 창 출력
 
-![[suzyStar] Untitled 3](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\[suzyStar] Untitled 3.png)
+![[suzyStar] Untitled 3](\public\readme_image\[suzyStar] Untitled 3.png)
 
 
 
@@ -38,7 +38,7 @@ Kpop의 영향력으로 인해 전세계적으로 커지면서 아이돌 또는 
   2. 새로운 계정에 대한 정보(이름, 아이디, 비밀번호) 입력
   3. 회원가입 완료되면 자동으로 로그인으로 이동
 
-![[suzyStar] Copy of Untitled 3](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\[suzyStar] Copy of Untitled 3.png)
+![[suzyStar] Copy of Untitled 3](\public\readme_image\[suzyStar] Copy of Untitled 3.png)
 
 
 
@@ -75,7 +75,7 @@ Kpop의 영향력으로 인해 전세계적으로 커지면서 아이돌 또는 
 
   - [ ] 시연 시나리오를 시각화를 하면 아래와 같다.
 
-    ![[suzyStar] Copy of Untitled 3](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\시나리오.png)
+    ![[suzyStar] Copy of Untitled 3](\public\readme_image\시나리오.png)
 
 
 
@@ -83,31 +83,31 @@ Kpop의 영향력으로 인해 전세계적으로 커지면서 아이돌 또는 
 
 **상품 리스트**
 
-![상품리스트](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\productlist.png)
+![상품리스트](\public\readme_image\productlist.png)
 
 
 
 **상품 상세 페이지**
 
-![상품 상세 페이지](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\productdetail.png)
+![상품 상세 페이지](\public\readme_image\productdetail.png)
 
 
 
 **로그인 페이지**
 
-![로그인](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\login.png)
+![로그인](\public\readme_image\login.png)
 
 
 
 **회원가입 페이지**
 
-![회원가입](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\signup.png)
+![회원가입](\public\readme_image\signup.png)
 
 
 
 **장바구니**
 
-![장바구니](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\basket.png)
+![장바구니](\public\readme_image\basket.png)
 
 
 
@@ -115,13 +115,13 @@ Kpop의 영향력으로 인해 전세계적으로 커지면서 아이돌 또는 
 
 * 가격 업데이트 및 상품 삭제 가능한 버튼이 뜸.
 
-![productadmin](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\productadmin.png)
+![productadmin](\public\readme_image\productadmin.png)
 
 
 
 **상품 외 콘텐츠**
 
-![contents](C:\Users\mijip\Documents\react_workspace\suzy\SuzyStar\public\readme_image\contents.png)
+![contents](\public\readme_image\contents.png)
 
 
 
