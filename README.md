@@ -115,7 +115,7 @@ Kpop의 영향력으로 인해 전세계적으로 커지면서 아이돌 또는 
 
 * 가격 업데이트 및 상품 삭제 가능한 버튼이 뜸.
 
-![productadmin](https://github.com/mijip0320/SuzyStar/blob/master/public/readme_image/productadmin.PNGg)
+![productadmin](https://github.com/mijip0320/SuzyStar/blob/master/public/readme_image/productadmin.PNG)
 
 
 
